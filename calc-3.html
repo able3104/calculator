@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calc_css.css">
+  <script>
+    const checkCondition = () => {
+      const width = window.innerWidth;
+
+      if (width >= 540) {
+        clearInterval(interval);
+        window.location.href = "calc-2.html";
+      }
+      if (width < 540) {
+        clearInterval(interval);
+        window.location.href = "calc1.html";
+      }
+    };
+
+    const interval = setInterval(checkCondition, 1000);
+
+    window.addEventListener("resize", checkCondition);
+  </script>
+
+</head>
+
+<body>
+  <h1 style="font-size: 30px; text-align: center; justify-content: center;">표시할 수 없습니다.</h1>
+  <script src="main.js"></script>
+</body>
+
+</html>
